@@ -556,4 +556,73 @@ footer {
     text-decoration: underline; /* sublinha quando passa o mouse */
 }
 
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Aumentar área clicável dos links sociais */
+  .social a {
+    padding: 8px 6px;
+    border-radius: 4px;
+  }
+
+  /* Ajuste hero image para mobile */
+  .hero-image {
+    width: 200px !important;
+    height: 200px !important;
+    transform: none !important;
+  }
+
+  .hero-image img {
+    transform: scale(1) rotate(0) !important;
+  }
+}
+
+/* Tipografia responsiva para telas muito pequenas */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero h1 strong {
+    font-size: 32px;
+  }
+  .hero h2 {
+    font-size: 18px;
+  }
+  .services h2 {
+    font-size: 28px;
+  }
+}

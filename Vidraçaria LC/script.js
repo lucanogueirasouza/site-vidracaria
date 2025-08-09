@@ -52,3 +52,11 @@ const observador = new IntersectionObserver((entradas) => {
 
 elementos.forEach(el => observador.observe(el));
 
+// Fechar menu ao clicar em link (mobile)
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('active');
+  });
+});
+
+
